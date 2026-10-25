@@ -176,7 +176,6 @@ resource "aws_nat_gateway" "frontend_ngw" {
 resource "aws_subnet" "frontend_extra_subnet07" {
   vpc_id     = aws_vpc.frontend_vpc.id
   cidr_block = "10.0.10.0/24"
-
   tags = {
     Name = "${var.frontend_prefix}-extra-subnet07-${var.region}"
   }
